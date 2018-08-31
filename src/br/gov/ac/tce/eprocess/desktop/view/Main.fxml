@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<VBox xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.gov.ac.tce.eprocess.desktop.controller.MainController">
+   <children>
+      <MenuBar>
+        <menus>
+          <Menu mnemonicParsing="false" text="Arquivo">
+            <items>
+              <MenuItem disable="true" mnemonicParsing="false" text="Reimprimir Anterior" />
+                  <MenuItem disable="true" mnemonicParsing="false" text="Copiar Protocolos" />
+                  <MenuItem disable="true" mnemonicParsing="false" text="Salvar Protocolos" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem mnemonicParsing="false" onAction="#close" text="Fechar" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Editar">
+            <items>
+                  <MenuItem disable="true" mnemonicParsing="false" text="Inserir Manualmente" />
+                  <MenuItem disable="true" mnemonicParsing="false" text="Histórico" />
+              <MenuItem mnemonicParsing="false" onAction="#openPreferencias" text="Preferências" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Ajuda">
+            <items>
+              <MenuItem disable="true" mnemonicParsing="false" text="Sobre" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <StackPane minHeight="400.0" minWidth="800.0">
+      	<children>
+      	   <BorderPane minHeight="420.0" minWidth="820.0" prefHeight="600.0" prefWidth="900.0">
+      			<top>
+      		      <HBox alignment="CENTER_LEFT" maxHeight="60.0" minHeight="50.0" minWidth="700.0" prefHeight="50.0" prefWidth="900.0" styleClass="header" stylesheets="@css/header.css" BorderPane.alignment="CENTER">
+      		         <children>
+      		            <ImageView fitHeight="30.0" fitWidth="240.0" pickOnBounds="true" preserveRatio="true">
+      		               <image>
+      		                  <Image url="@images/icon_tce.png" />
+      		               </image>
+      		            </ImageView>
+      		            <Separator blendMode="COLOR_BURN" orientation="VERTICAL" prefHeight="200.0" styleClass="separator" />
+      		            <ImageView fitHeight="30.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+      		               <image>
+      		                  <Image url="@images/icon_sistema.png" />
+      		               </image>
+      		            </ImageView>
+      		            <Label styleClass="labelPadding" text="Processo Eletrônico - Protocolo" textFill="WHITE">
+      		               <font>
+      		                  <Font size="18.0" />
+      		               </font>
+      		            </Label>
+      		         </children>
+                  </HBox>
+      		   </top>
+      		   <center>
+      		      <AnchorPane minHeight="400.0" minWidth="800.0" prefHeight="600.0" prefWidth="900.0" styleClass="painelExterno" stylesheets="@css/body.css" BorderPane.alignment="CENTER">
+      		         <children>
+      		            <StackPane fx:id="root" minHeight="400.0" minWidth="800.0" prefHeight="600.0" prefWidth="900.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+      		         </children>
+      		      </AnchorPane>
+      		   </center>
+      	   </BorderPane>
+            <VBox fx:id="loadingPane" alignment="CENTER" minHeight="420.0" minWidth="820.0" prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: rgb(0, 0, 0, 0.2);" visible="false" StackPane.alignment="CENTER">
+               <children>
+                  <ProgressIndicator />
+               </children>
+            </VBox>
+      	</children>
+      </StackPane>
+   </children>
+</VBox>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="paneLogin" maxHeight="300.0" maxWidth="500.0" minHeight="300.0" minWidth="500.0" prefHeight="300.0" prefWidth="500.0" styleClass="painelInterno" stylesheets="@css/body.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.gov.ac.tce.eprocess.desktop.controller.LoginController">
+	<children>
+		<Label layoutX="141.0" layoutY="52.0" text="Autenticação no Sistema">
+			<font>
+				<Font size="20.0" />
+			</font>
+		</Label>
+		<TextField fx:id="textLogin" layoutX="164.0" layoutY="113.0" prefHeight="37.0" prefWidth="250.0">
+			<font>
+				<Font size="16.0" />
+			</font>
+		</TextField>
+		<PasswordField fx:id="passwdLogin" layoutX="164.0" layoutY="167.0" prefHeight="25.0" prefWidth="250.0">
+			<font>
+				<Font size="16.0" />
+			</font>
+		</PasswordField>
+		<Label layoutX="85.0" layoutY="119.0" text="Login: *">
+			<font>
+				<Font name="System Bold" size="16.0" />
+			</font>
+		</Label>
+		<Label layoutX="85.0" layoutY="173.0" text="Senha: *">
+			<font>
+				<Font name="System Bold" size="16.0" />
+			</font>
+		</Label>
+		<Button defaultButton="true" layoutX="253.0" layoutY="234.0" mnemonicParsing="false" onAction="#doLogin" prefHeight="37.0" prefWidth="98.0" text="Entrar">
+			<font>
+				<Font size="16.0" />
+			</font>
+		</Button>
+      <Button cancelButton="true" layoutX="149.0" layoutY="234.0" mnemonicParsing="false" onAction="#openEtiqueta" prefHeight="37.0" prefWidth="98.0" text="Cancelar">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
+	</children>
+</AnchorPane>

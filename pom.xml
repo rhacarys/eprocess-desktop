@@ -1,0 +1,98 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>eprocessDesktop</groupId>
+	<artifactId>Etiqueta</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>Processo Eletrônico - Protocolo</name>
+	<description>Cliente desktop para impressão de etiqueta de protocolo do Processo Eletrônico</description>
+
+	<distributionManagement>
+		<repository>
+			<id>releases</id>
+			<name>Releases</name>
+			<url>http://150.165.75.171:8082/nexus/content/repositories/releases/</url>
+		</repository>
+		<snapshotRepository>
+			<id>snapshots</id>
+			<name>Snapshots</name>
+			<url>http://150.165.75.171:8082/nexus/content/repositories/snapshots/</url>
+		</snapshotRepository>
+	</distributionManagement>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<mainClass>br.gov.ac.tce.eprocess.desktop.MainApplication</mainClass>
+		<application.title>${project.artifactId}</application.title>
+	</properties>
+
+
+	<build>
+		<sourceDirectory>src</sourceDirectory>
+		<resources>
+			<resource>
+				<directory>src</directory>
+				<excludes>
+					<exclude>**/*.java</exclude>
+				</excludes>
+			</resource>
+		</resources>
+		<plugins>
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.5.1</version>
+				<configuration>
+					<source>1.8</source>
+					<target>1.8</target>
+				</configuration>
+			</plugin>
+	
+			<plugin>
+				<groupId>com.zenjava</groupId>
+				<artifactId>javafx-maven-plugin</artifactId>
+				<version>8.8.3</version>
+				<configuration>
+					<mainClass>br.gov.ac.tce.eprocess.desktop.MainApplication</mainClass>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+	<dependencies>
+		<dependency>
+			<groupId>br.gov.ac.tce.icuria.jaas</groupId>
+			<artifactId>ConsumidorAutenticadorCJUR3</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}\lib\ConsumidorAutenticadorCJUR3-0.0.1-SNAPSHOT.jar</systemPath>
+		</dependency>
+		
+		<dependency>
+			<groupId>br.gov.ac.tce.icuria.jaas</groupId>
+			<artifactId>ws-login-module</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}\lib\ws-login-module-0.0.1-SNAPSHOT.jar</systemPath>
+		</dependency>
+
+		<dependency>
+			<groupId>br.gov.ac.tce.eprocess</groupId>
+			<artifactId>eprocessws</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}\lib\eprocessws-0.0.1-SNAPSHOT.jar</systemPath>
+		</dependency>
+
+		<dependency>
+			<groupId>com.google.code.gson</groupId>
+			<artifactId>gson</artifactId>
+			<version>2.2.2</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>com.sun.jersey</groupId>
+			<artifactId>jersey-client</artifactId>
+			<version>1.8</version>
+		</dependency>
+	</dependencies>
+</project>

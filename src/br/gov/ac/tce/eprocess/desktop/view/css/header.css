@@ -1,0 +1,14 @@
+/* Folha de estilos para o cabeçalho das telas da aplicação JavaFX */
+
+.header {
+	-fx-background-color: linear-gradient(to bottom, #1578c9 0%, #0b66b1 100%);
+	-fx-padding: 8px 10px;
+}
+
+.separator {
+	-fx-padding: 0 8px;
+}
+
+.labelPadding {
+	-fx-padding: 0 10px;
+}

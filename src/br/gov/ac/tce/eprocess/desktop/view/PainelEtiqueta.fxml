@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.web.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="400.0" maxWidth="770.0" minHeight="400.0" minWidth="770.0" prefHeight="400.0" prefWidth="770.0" styleClass="painelInterno" stylesheets="@css/body.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.gov.ac.tce.eprocess.desktop.controller.EtiquetaController">
+   <children>
+      <Label layoutX="36.0" layoutY="39.0" text="Clique no botão para gerar a etiqueta do protocolo.">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="549.0" layoutY="39.0" text="Protocolos Cadastrados" textAlignment="CENTER" wrapText="true">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <ListView id="listaProtocolos" fx:id="protocolos" focusTraversable="false" layoutX="558.0" layoutY="77.0" prefHeight="290.0" prefWidth="178.0" styleClass="lista">
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor>
+      </ListView>
+      <Button alignment="CENTER" defaultButton="true" graphicTextGap="16.0" layoutX="142.0" layoutY="118.0" mnemonicParsing="false" onAction="#doEtiqueta" prefHeight="115.0" prefWidth="200.0" text="Gerar Etiqueta" wrapText="true">
+         <font>
+            <Font size="20.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="65.0" fitWidth="70.0" onTouchPressed="#doEtiqueta" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/barcode.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Separator layoutX="510.0" orientation="VERTICAL" prefHeight="400.0" prefWidth="2.0" />
+      <Button layoutX="95.0" layoutY="326.0" mnemonicParsing="false" onAction="#openLogin" text="Enviar Protocolos para o Processo Eletrônico">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

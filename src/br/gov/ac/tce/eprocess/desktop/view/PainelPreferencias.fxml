@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="300.0" maxWidth="540.0" minHeight="300.0" minWidth="500.0" prefHeight="300.0" prefWidth="540.0" styleClass="painelInterno" stylesheets="@css/body.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.gov.ac.tce.eprocess.desktop.controller.PreferenciasController">
+   <children>
+      <Label layoutX="217.0" layoutY="42.0" text="Preferências">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="46.0" layoutY="112.0" text="Nome da Impressora:">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="nomeImpressora" layoutX="209.0" layoutY="106.0" prefHeight="37.0" prefWidth="280.0">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </TextField>
+      <Button cancelButton="true" layoutX="157.0" layoutY="223.0" mnemonicParsing="false" onAction="#cancelar" prefHeight="37.0" prefWidth="107.0" text="Cancelar">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
+      <Button defaultButton="true" layoutX="277.0" layoutY="223.0" mnemonicParsing="false" onAction="#salvar" prefHeight="37.0" prefWidth="107.0" text="Salvar">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
+      <TextField fx:id="urlProcesso" disable="true" layoutX="209.0" layoutY="158.0" prefHeight="37.0" prefWidth="280.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <Label layoutX="46.0" layoutY="164.0" text="Processo Eletrônico:">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
